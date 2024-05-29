@@ -14,7 +14,7 @@ from .forms import RoomForm,UserForm,MyUserCreationForm
 
 def loginPage(request):
     page = 'login'
-    if request.user.is_authenticated:
+    if request.user.is_authenticated: 
         return redirect('home')
     if request.method == 'POST':
         email = request.POST.get('email').lower()
@@ -55,6 +55,7 @@ def registerPage(request):
 
 def home(request):
     q = request.GET.get('q') if request.GET.get('q') != None else ''
+    # if you want to serach for something in the navbar
     rooms = Room.objects.filter(
         Q(topic__name__icontains=q) |
         Q(name__icontains=q) |

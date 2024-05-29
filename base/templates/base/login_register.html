@@ -12,13 +12,14 @@
         </div>
       </div>
       <div class="layout__body">
-        <h2 class="auth__tagline">Find your study partner</h2>
+        <h2 class="auth__tagline">Get your queries cleared !!</h2>
 
         <form class="form" action="" method="POST">
-          {% csrf_token %}
+          {% csrf_token %} 
+          <!-- it is used to prevent malicious attacks and secure data -->
           <div class="form__group form__group">
             <label for="room_name">Email</label>
-            <input id="username" name="email" type="text" placeholder="e.g. dennis@gmail.com" />
+            <input id="username" name="email" type="text" placeholder="e.g. cp@gmail.com" />
           </div>
           <div class=" form__group">
             <label for="password">Password</label>
@@ -57,7 +58,7 @@
         </div>
       </div>
       <div class="layout__body">
-        <h2 class="auth__tagline">Find your study partner</h2>
+        <h2 class="auth__tagline">Get your queries cleared !!</h2>
 
         <form class="form" action="" method="POST">
           {% csrf_token %}
